@@ -23,13 +23,11 @@ Description: Personal Portfolio & Resume HTML Template
 14. Responsive Settings
 
 */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap&subset=cyrillic-ext");
 /*=================================================================*/
 /*                      BASE                              
 /*=================================================================*/
 body {
-  color: #888;
+  color: #333;
   background-color: #D2DED4;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -246,6 +244,11 @@ header a:hover {
   color: #FFF;
   text-decoration: none;
 }
+header .site-title-heading {
+  margin-bottom: 0;
+  font: inherit;
+  color: inherit;
+}
 header .site-title {
   display: block;
   font-size: 21px;
@@ -403,12 +406,19 @@ main.content.push {
   max-width: 600px;
   z-index: 1;
 }
-.hero .cta h1 {
+.hero .cta .hero-traits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hero .cta h1, .hero .cta .hero-traits li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   color: #FFF;
   font-size: 16px;
   line-height: 0.2;
 }
-.hero .cta h1 .dot:after {
+.hero .cta h1 .dot:after, .hero .cta .hero-traits li .dot:after {
   content: "";
   background-color: #f1b550;
   border-radius: 50%;
@@ -442,6 +452,7 @@ section.padding-60 {
 }
 
 .section-title {
+  font-size: 24px;
   margin: 0;
 }
 .section-title:after {
@@ -482,7 +493,7 @@ section.padding-60 {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.service-item h4, .service-item i {
+.service-item h3, .service-item h4, .service-item i {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -495,11 +506,11 @@ section.padding-60 {
   -moz-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.service-item:hover h4, .service-item:hover i {
+.service-item:hover h3, .service-item:hover h4, .service-item:hover i {
   color: #FFF;
 }
 
-#services h4 {
+#services h3, #services h4 {
   font-size:15px;
 }
 #services a {
@@ -516,7 +527,7 @@ section.padding-60 {
 
 .timeline a {
   text-decoration: underline;
-  color: #709473;
+  color: #567458;
 }
 
 .timeline a:hover {
@@ -590,6 +601,9 @@ section.padding-60 {
   z-index: 1;
 }
 
+.entry .body h3 {
+  font-size: 18px;
+}
 .entry .body {
   margin: 0 0 6em;
   float: right;
@@ -713,7 +727,7 @@ section.padding-60 {
 }
 
 .portfolio-info {
-  color: #888;
+  color: #333;
   font-size: 13px;
 }
 
@@ -731,7 +745,7 @@ section.padding-60 {
   margin-bottom: 25px;
 }
 .portfolio-filter li {
-  color: #888;
+  color: #333;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
@@ -800,7 +814,7 @@ section.padding-60 {
   margin-right: 4px;
 }
 .price-item .price span {
-  color: #888;
+  color: #333;
   font-size: 12px;
   font-weight: 400;
 }
@@ -1052,7 +1066,7 @@ section.padding-60 {
 
 .btn-default {
   color: #FFF;
-  background: #f1b550;
+  background: #b07519;
 }
 .btn-default:hover {
   background: #709473;
@@ -1673,12 +1687,12 @@ section.padding-60 {
   }
 }
 @media only screen and (max-width: 767px) {
-  .hero .cta h1 {
+  .hero .cta h1, .hero .cta .hero-traits li {
     font-size: 16px;
     line-height: 0.8;
   }
 
-  .hero .cta h1 .dot {
+  .hero .cta h1 .dot, .hero .cta .hero-traits li .dot {
     xdisplay: none;
   }
 
@@ -1710,7 +1724,7 @@ section.padding-60 {
     display: none;
   }
 
-  .hero .cta h1 {
+  .hero .cta h1, .hero .cta .hero-traits li {
     font-size: 16px;
   }
 }
